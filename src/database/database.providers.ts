@@ -4,6 +4,6 @@ export const databaseProviders = [
   {
     provide: 'DATABASE_CONNECTION',
     useFactory: (): Promise<typeof mongoose> =>
-    mongoose.connect('mongodb://127.0.0.1:27017/blog'),
+    mongoose.connect('mongodb+srv://indusudheesh:3kOKS5rJhE09T0Uz@cluster0.amzv5.mongodb.net/blog?retryWrites=true&w=majority&appName=Cluster0'),
   },
 ];

@@ -46,7 +46,7 @@ export class BlogController {
     let result = await this.blogService.getSingleBlog(blogId);
     response.status(result.status).send(result.data);
   }
-
+  
   @Patch('/updateBlog/:blogId')
   @UseInterceptors(FileInterceptor('file', { dest: './public' }))
   async updateBlog(
